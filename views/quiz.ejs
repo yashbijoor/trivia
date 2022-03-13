@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <p class="question"><%= question %></p>
+        <div class="score-div"><span class="score">Score: <%= score %></span></div>
+    </div>
+    <form class="option-form" action="/" method="post">
+        <div class="option1">
+            <p class="option1">A. <%= optionList[0] %></p>
+        </div>
+        <div class="option2">
+            <p class="option2">B. <%= optionList[1] %></p>
+        </div>
+        <div class="option3">
+            <p class="option3">C. <%= optionList[2] %></p>
+        </div>
+        <div class="option4">
+            <p class="option4">D. <%= optionList[3] %></p>
+        </div>
+        <select class="options" name="options">
+            <option name="1" value="1">A</option>
+            <option name="2" value="2">B</option>
+            <option name="3" value="3">C</option>
+            <option name="4" value="4">D</option>
+        </select>
+        <button class="btn" type="submit" value="Reload Page" onClick="window.location.reload(true)"><%= button %></button>
+    </form>
+    
+</body>
+</html>
